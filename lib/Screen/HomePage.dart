@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pizza_food/Screen/SecondScren.dart' show SecondScrren;
 import 'package:pizza_food/Widgets/modelpizza.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
               // SizedBox(height: MediaQuery.of(context).size.height * 0.039),
               Align(
                 alignment: Alignment.bottomRight,
-                child: _button()),
+                child: _button(context)),
             ],
           ),
         ),
@@ -117,9 +118,11 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _button() {
+  Widget _button(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>SecondScrren()));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black,
       ),

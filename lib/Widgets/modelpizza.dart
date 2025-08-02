@@ -6,13 +6,13 @@ class Modelpizza extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.amberAccent,
         borderRadius: BorderRadius.circular(15),
       ),
       margin: EdgeInsets.all(10),
-      height: 100,
+      height: 150,
       width: 250,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,19 +25,21 @@ class Modelpizza extends StatelessWidget {
                 width: 200,
                 fit: BoxFit.cover,
               ),
+              
             ),
           ),
+          SizedBox(height: 30,),
           Text("Pizza Margherita",style:TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
           Text("Tomato, mozzarella, fresh basil (classic Italian).",style:TextStyle(color: const Color.fromARGB(120, 0, 0, 0),fontSize: 17)),
           const Spacer(),
           Row(
             children: [
-              Text("\$80.00",style: TextStyle(fontSize: 20,color: Colors.blueAccent),),
+              Text("\$80.00",style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold),),
               SizedBox(width: 5,),
               Text("\$80.00",style: TextStyle(decoration: TextDecoration.lineThrough,fontSize: 20,color: Colors.grey),),
               Spacer(),
               Container(
-                padding: EdgeInsets.all(8),
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   color: Colors.black,

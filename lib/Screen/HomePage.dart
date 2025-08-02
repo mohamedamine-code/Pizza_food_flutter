@@ -16,8 +16,13 @@ class HomePage extends StatelessWidget {
               _headerapp(context),
               SizedBox(height: MediaQuery.of(context).size.height * 0.039),
               _contentText(context),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.039),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.020),
+              // SizedBox(height: MediaQuery.of(context).size.height * 0.020),
               _menuContent(context),
+              // SizedBox(height: MediaQuery.of(context).size.height * 0.039),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: _button()),
             ],
           ),
         ),
@@ -42,10 +47,14 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.001),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.005),
             Text(
               "Upgrade my plane",
-              style: TextStyle(fontSize: 15, color: Colors.blueAccent),
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
@@ -64,19 +73,31 @@ class HomePage extends StatelessWidget {
         Text(
           // textAlign: TextAlign.left,
           "Pizza Palooa :",
-          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2,
+          ),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.001),
 
         Text(
           "Because ordinary ",
-          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2,
+          ),
         ),
-        SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.001),
 
         Text(
           "Isn't an Option !",
-          style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 45,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 2,
+          ),
         ),
       ],
     );
@@ -86,13 +107,29 @@ class HomePage extends StatelessWidget {
     return Container(
       // color: Colors.red,
       width: MediaQuery.of(context).size.width,
-      height: 370,
+      height: 430,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Modelpizza();
         },
       ),
+    );
+  }
+
+  Widget _button() {
+    return ElevatedButton(
+      onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.black,
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text("View All",style: TextStyle(fontSize: 18, color: Colors.white),),
+          Icon(Icons.arrow_forward , color: Colors.white,)
+        ],
+      )
     );
   }
 }
